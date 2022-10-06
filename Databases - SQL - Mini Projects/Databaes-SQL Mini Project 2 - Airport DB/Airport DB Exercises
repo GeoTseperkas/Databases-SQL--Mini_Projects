@@ -1,0 +1,69 @@
+Exercise:
+
+A. Write appropriate SQL statements to answer the following questions:
+
+
+1. Display flight details with a departure date of 05/01/2018 and destination Toronto.
+
+2. Display a list of flight details between 900 and 1500 miles. The list should be sorted by distance in ascending order.
+
+3. Display a list of the total number of flights with a departure date between 1/5/2018 and 30/5/2018 per destination.
+
+4. Display a list of destinations and the total number of flights per destination. Only destinations for which there are at least three flights should appear in the list.
+
+5. Display a list of pilots certified in the operation of at least three aircraft.
+
+6. Display the total cost of monthly salaries of all company employees.
+
+7. Show the total cost of the monthly salaries of all pilots in the company.
+
+8. Show the total cost of the company's non-pilot employees' monthly salaries.
+
+9. Display a list of aircraft names that can cover the flight from Athens to Melbourne without a refueling stop.
+
+10. Display the full name of pilots certified to operate a Boeing type aircraft (aircraft name begins with Boeing).
+
+11. Find the name of the pilots who are certified in aircraft capable of flying more than 3000 miles, but are not certified in any Boeing-type aircraft.
+
+12. Find the name of the employees with the highest salary.
+
+13. Find the name of the employees who have the second highest salary.
+ 
+14. Find the names of the aircraft for which all certified pilots have a salary of at least 6000 euros.
+
+15. For each pilot certified in the operation of at least three aircraft, find his code and the largest crange of aircraft in which he is certified.
+
+16. Find the name of the employees with a salary less than the cost of the cheapest flight to Melbourne.
+
+17. Find the name and salary of non-pilot employees who earn above the average pilot salary.
+
+
+
+
+B. Views
+
+18. Create two Views. The first view (pilots) will contain all the details of the pilots and the second (others) will contain all the details of the employees who are not pilots. Using the views you created, rewrite questions 7, 8 and 17.
+
+19. Create a view that will contain the name of each aircraft and the details of the flights (fno, fromCity, toCity) that each aircraft can cover without refueling. Using the view you created display a list of aircraft names and the number of flights each aircraft can serve.
+
+
+
+C. PROCEDURES
+
+20. Create a procedure that will display the code of each flight and next to it the designation "Cheap", "Regular" or "Expensive". A flight is considered cheap if the cost of the ticket is up to 500 euros, normal if the cost is between 501 and 1500 euros and expensive if the cost of the ticket exceeds 1500 euros.
+
+21. Create a procedure that will accept as parameters the name and code of a pilot as well as the name and code of an aircraft. The process will certify the pilot in that particular aircraft. If the pilot or aircraft does not exist in the database the procedure should import them. In case the pilot is already certified in the operation of the specific aircraft, the procedure will display an appropriate message.
+
+
+
+D. TRIGGERS
+
+22. Create a trigger that will fire every time a pilot is certified to operate an aircraft. If with the new certification the pilot reaches three, the trigger will increase his salary by 10%.
+
+23. Create a trigger that will fire whenever the price of a flight ticket is updated. The trigger will record the following information in the flight_history table:
+    • Flight code (fno)
+    • Name of user who made the update
+    • Update date and time
+    • Ticket price before update
+    • Ticket price after update.
+
