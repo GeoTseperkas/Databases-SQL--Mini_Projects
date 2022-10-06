@@ -1,0 +1,41 @@
+Airline Database
+
+Consider the following database that contains information about an airline's flights.
+
+flights (#fno, fromCity, toCity, distance, depDate, depTime, arrDate, arrTime, price)
+
+aircrafts (#aid, name, range) employees(#empid, lastname, firstname, salary)
+
+certified (#empid, #aid)
+
+where:
+
+flights(#fno, fromCity, toCity, distance, depDate, depTime, arrDate, arrTime, price)
+    • fno=Flight code, alphanumeric field, primary key of the table.
+    • fromCity=flight origin.
+    • toCity=flight destination.
+    • distance=flight distance in miles.
+    • depDate=Date of departure. Date type field.
+    • depTime=Departure Time. Field type time.
+    • arrDate=Date of arrival. Date type field.
+    • arrTime=Arrival time. Field type time.
+    • price=Ticket cost.
+
+aircraft(#aid, name, range)
+    • aid = Aircraft code, numeric field, primary key.
+    • name=Aircraft name.
+    • crange=Numeric range. It states the maximum distance (in miles) that the aircraft can cover without refueling.
+
+
+employees(#empid, lastname, firstname, salary)
+    • empid = Employee ID. Numeric field, primary key.
+    • lastname=Employee's last name
+    • firstname=Employee's first name
+    • salary=Monthly employee salary
+
+
+The employees table contains the details of the pilots and other employees of the airline. All pilots are certified in single or 2 modeof more of the company's aircraft. This information is given by the following relationship:
+
+certified(#empid, #aid)
+    • empid= Pilot code
+    • aid = Aircraft code.
