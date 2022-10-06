@@ -4,7 +4,9 @@ CREATE TABLE flight_history
  utime DATETIME NULL,
  price_old int,
  price_new int,
- );CREATE TRIGGER modify_price
+ );
+
+CREATE TRIGGER modify_price
 ON flights AFTER UPDATE
  AS IF UPDATE (price)
  BEGIN
@@ -17,8 +19,11 @@ SELECT @fno =(SELECT fno FROM deleted)
 INSERT INTO flight_history
  VALUES (@fno, USER_NAME(),
  GETDATE(), @price_old, @price_new)
- END UPDATE flights
- SET price=450
+ END
+
+UPDATE flights
+SET price=450
 WHERE fno= 'A305'
 
 SELECT * FROM flight_history
+
