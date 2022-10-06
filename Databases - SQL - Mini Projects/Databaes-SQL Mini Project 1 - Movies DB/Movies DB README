@@ -39,3 +39,5 @@ movie_actor (#mid #actid): Array that implements the many-to-many relationship b
 movie_cat (#mid#catid): Array that implements the many-to-many relationship between movies and categories.
     • mid: movie code
     • catid: category code
+
+
