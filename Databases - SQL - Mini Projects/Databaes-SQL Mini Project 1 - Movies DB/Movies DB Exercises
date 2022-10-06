@@ -1,0 +1,44 @@
+Excercises
+
+You are asked to write and execute appropriate commands in SQL language to answer the following questions:
+
+1. Display a list of last and first names of actors whose last name starts with 'K'. The list should be sorted alphabetically by last name.
+
+2. Display a list with the title and year of production of movies that were produced between 1990 and 2007. The list should be sorted by year of production in descending order.
+
+3. Display a list with the movie title, last name and first name of the director for all movies with a country of production in Greece (Greece code 'GRC'). The list should be sorted alphabetically by the last name of the directors.
+
+4. Display a list with the title and year of production of the films directed by the director with the last name 'Sakellarios'
+
+5. Display a list of the titles and year of production of the movies in which the actor named 'Eastwood' has starred
+
+6. Show the last name and first name of the main characters of the movie called 'Amelie'
+
+7. Count the number of movies available on 'DVD'.
+
+8. Find the total number of copies (of all movies) available on 'DVD'.
+
+9. Display the price of the most expensive 'DVD'.
+
+10. Find the total value of all copies (all movies) available on 'BLU RAY'.
+
+11. Display a list of the directors' names and the number of films each has directed.
+
+12. Find the number of movies the actor with the last name 'Papagiannopoulos' has starred in.
+
+13. Display a list with the last name and first name of actors who have starred in films not produced in Greece (Greece code 'GRC').
+
+14. Display a list of the titles of the films in which the actors with the last names 'Kourkoulos' and 'Karezi' have co-starred respectively. Each movie title should appear only once in the directory.
+
+15. Display a list of the titles of the films in which the actress named 'Karezi' starred and in which the actor named 'Kourkoulos' did not.
+
+16. Display a list of movie titles that belong to both the 'Comedy' category and the 'Emotional' category. Each movie title should appear only once in the directory.
+
+17. Display a list with the category and number of movies per category. ONLY categories for which there are at least 5 movies should appear in the list.
+
+18. Display a list of the directors' names and the number of films each has directed. The list should also include the names of directors for whom there are no films.
+
+19. Delete the “Biography” category from the database.
+
+20. Update the price of all DVD copies of the movie titled “Amelie”. The new price is 70 euros for each copy on DVD.
+
