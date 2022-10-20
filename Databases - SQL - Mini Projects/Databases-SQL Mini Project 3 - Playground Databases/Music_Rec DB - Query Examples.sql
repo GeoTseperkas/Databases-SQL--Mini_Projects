@@ -1,0 +1,18 @@
+USE music_rec;
+
+WITH all_users AS ( 
+  SELECT user1_id AS user_id, user2_id AS friend_id FROM followers
+  UNION
+  SELECT user2_id AS user_id, user1_id AS friend_id FROM followers
+), follower_likes AS (
+  SELECT au.user_id, l.song_id, count(l.user_id) AS like_count
+  FROM all_users AS au 
+  LEFT JOIN likes l ON au.friend_id = l.user_id
+  GROUP BY au.user_id, l.song_id
+)
+SELECT fl.user_id, fl.song_id, fl.like_count, s.name, s.artist
+FROM follower_likes AS fl
+LEFT JOIN likes AS l ON fl.user_id = l.user_id AND fl.song_id = l.song_id
+INNER JOIN songs AS s ON s.song_id = fl.song_id
+WHERE l.song_id IS NULL
+ORDER BY fl.user_id, fl.like_count DESC
