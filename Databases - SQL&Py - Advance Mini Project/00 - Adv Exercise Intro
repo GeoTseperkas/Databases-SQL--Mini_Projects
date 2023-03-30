@@ -1,0 +1,43 @@
+MOVIE DATABASE
+
+An online store that sells motion pictures uses a database to record the basic elements of the movies.
+
+DESCRIPTION OF LOGIC FORM
+
+actors (#actid, lname, fname): Table in which the actors - protagonists of the films are registered:
+    • actid: primary key
+    • lname: actor 's last name
+    • fname: actor name
+
+directors (#did,lname,fname): Table in which the directors of the films are registered:
+    • did: primary key
+    • lname: director 's last name
+    • fname: director name
+
+categories (#catid, category): Table with the categories of movies (eg Comedy, Drama, Adventure, etc.):
+    • catid: primary key
+    • category: category
+
+movies (#mid,title,pyear,production,duration,did): Table for entering the basic elements of each movie:
+    • mid : primary key
+    • title : movie title
+    • pyear : production year
+    • production : production country code of the film (eg GRC, USA, GBR)
+    • duration : movie duration in minutes
+    • did : movie director code
+
+copies (#barcode, mid, medium, price): Table for entering the details of the copies of each film:
+    • barcode : primary key
+    • mid : code of the film that concerns the specific copy
+    • medium : medium of distribution of the specific copy (DVD, BLUE RAY, ONLINE)
+    • price : selling price of the copy
+
+movie_actor (#mid #actid): Array that implements the many-to-many relationship between movies and actors (protagonists).
+    • mid: movie code
+    • actid: actor code
+
+movie_cat (#mid#catid): Array that implements the many-to-many relationship between movies and categories.
+    • mid: movie code
+    • catid: category code
+
+
