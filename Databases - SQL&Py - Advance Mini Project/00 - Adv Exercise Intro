@@ -1,43 +1,22 @@
-MOVIE DATABASE
+Advanced Exercise:
 
-An online store that sells motion pictures uses a database to record the basic elements of the movies.
+As part of your job responsibilities, you have been tasked with developing a reporting solution for the accounting department of your company. 
+The department has requested a report that summarizes the number of tasks completed by employees during a specific period of time. 
+The report should display the total number of tasks completed by each employee, as well as the number of tasks completed each day.
 
-DESCRIPTION OF LOGIC FORM
+To generate this report, you will need to create a new schema in the database and design four tables with appropriate column names, data types, and constraints. 
+The tables should be named Sales, Imports, Revenue Analysis, and Profit Analysis, and each should have three columns: Name, Date, and Jobs Completed.
 
-actors (#actid, lname, fname): Table in which the actors - protagonists of the films are registered:
-    • actid: primary key
-    • lname: actor 's last name
-    • fname: actor name
+Once the tables have been created, you will need to insert data into them using SQL statements.
 
-directors (#did,lname,fname): Table in which the directors of the films are registered:
-    • did: primary key
-    • lname: director 's last name
-    • fname: director name
+After inserting the data, you will need to use Python and write a dynamic SQL statement that creates a column for each day in the specified date range, 
+which will be entered by the user. The statement will then write the sum of each employee's completed tasks on that day in the corresponding column. 
+This step will ensure that the final report only has one row for each employee and one column for each day, 
+rather than multiple rows for each employee and multiple rows for each date.
 
-categories (#catid, category): Table with the categories of movies (eg Comedy, Drama, Adventure, etc.):
-    • catid: primary key
-    • category: category
+In addition to the initial report, the accounting department has requested a second report that shows the sum of each employee's completed tasks across all dates, 
+along with a grand total for each employee. This second report, which we will call the Task Analysis, will be created using another SQL query.
 
-movies (#mid,title,pyear,production,duration,did): Table for entering the basic elements of each movie:
-    • mid : primary key
-    • title : movie title
-    • pyear : production year
-    • production : production country code of the film (eg GRC, USA, GBR)
-    • duration : movie duration in minutes
-    • did : movie director code
-
-copies (#barcode, mid, medium, price): Table for entering the details of the copies of each film:
-    • barcode : primary key
-    • mid : code of the film that concerns the specific copy
-    • medium : medium of distribution of the specific copy (DVD, BLUE RAY, ONLINE)
-    • price : selling price of the copy
-
-movie_actor (#mid #actid): Array that implements the many-to-many relationship between movies and actors (protagonists).
-    • mid: movie code
-    • actid: actor code
-
-movie_cat (#mid#catid): Array that implements the many-to-many relationship between movies and categories.
-    • mid: movie code
-    • catid: category code
-
-
+Finally, you will need to create an Excel workbook that displays the results of both SQL queries. 
+The first sheet of the workbook should show the results of the Task Report, which summarizes the number of tasks completed by each employee on each day. 
+The second sheet should display the Task Analysis, which shows the sum of each employee's completed tasks across all dates, along with a grand total for each employee.
